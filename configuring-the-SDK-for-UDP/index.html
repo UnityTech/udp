@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/udp/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/udp/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/udp/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/udp/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/udp/images/favicon-32x32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/udp/images/favicon-16x16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/udp/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="The SDK for UDP is an easy way to integrate your game with UDP. Before publishing your game via unity distribution platform (UDP), configure the SDK and test your configuration. Here are the things t">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Configuring SDK for UDP">
+<meta property="og:url" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/index.html">
+<meta property="og:site_name" content="Unity Distribution Platform">
+<meta property="og:description" content="The SDK for UDP is an easy way to integrate your game with UDP. Before publishing your game via unity distribution platform (UDP), configure the SDK and test your configuration. Here are the things t">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/Create-a-Game-Settings-file.png">
+<meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/Unity-clent-updated.png">
+<meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/IAP-Catalog-updated.png">
+<meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/GameManager.png">
+<meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/UDP-Login.png">
+<meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/UDP-Purchase-22.png">
+<meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/UDP-PurchaseError-24.png">
+<meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/UDP-Query-18.png">
+<meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/publish-gstore.png">
+<meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/test-accounting-setting.png">
+<meta property="og:updated_time" content="2018-05-28T09:13:58.688Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Configuring SDK for UDP">
+<meta name="twitter:description" content="The SDK for UDP is an easy way to integrate your game with UDP. Before publishing your game via unity distribution platform (UDP), configure the SDK and test your configuration. Here are the things t">
+<meta name="twitter:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/Create-a-Game-Settings-file.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/udp/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/"/>
+
+
+
+
+
+  <title>Configuring SDK for UDP | Unity Distribution Platform</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/udp/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Unity Distribution Platform</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/udp/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/udp/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-document">
+          <a href="/udp/UDP-Guide/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            Document
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+	<h1 class="post-title" itemprop="name headline">Configuring SDK for UDP</h1>
+
+
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <p><br></p>
+<p>The SDK for UDP is an easy way to integrate your game with UDP. Before publishing your game via unity distribution platform (UDP), configure the SDK and test your configuration. Here are the things that you need to do:</p>
+<ul>
+<li>Generating a Unity client and test accounts</li>
+<li>Configuring the in-app purchase (IAP) for UDP</li>
+<li>Testing your configuration</li>
+</ul>
+<h2><span id="generating-a-unity-client-and-test-accounts">Generating a Unity client and test accounts</span><a href="#generating-a-unity-client-and-test-accounts" class="header-anchor">#</a></h2><p>You can manage your game in UDP via a Unity client and test your game with test accounts. Take the following steps to generate a Unity client and test accounts: </p>
+<ol>
+<li><p>Open Unity in the <code>INT</code>， <code>STAGING</code>，or <code>PROD</code> environment. In the <code>PROD</code> environment, just open the Unity Editor; in the <code>INT</code> or <code>STAGING</code> environment, open Unity with the following demands:</p>
+<blockquote>
+<p>For Mac OS:</p>
+<ul>
+<li>open /Applications/Unity/Unity.app –args -cloudEnvironment dev</li>
+<li>open /Applications/Unity/Unity.app –args -cloudEnvironment staging</li>
+</ul>
+<p>For Windows:</p>
+<ul>
+<li>C:/Program Files(86)/Unity/Editor/Unity.exe –args -cloudEnvironment dev</li>
+<li>C:/Program Files(86)/Unity/Editor/Unity.exe –args -cloudEnvironment staging</li>
+</ul>
+</blockquote>
+</li>
+<li><p>Log in with an <code>INT</code>， <code>STAGING</code> or <code>PROD</code> account. If you haven’t got an <code>INT</code> or <code>STAGING</code> account, register one in <a href="https://id-int.unity.com" target="_blank" rel="noopener">INT ID portal</a>, <a href="https://id-staging.unity.com" target="_blank" rel="noopener">STAGING ID Portal</a>, or <a href="https://id.unity.com" target="_blank" rel="noopener">PROD ID Portal</a>.</p>
+</li>
+<li><p>Create or open a project and import the SDK. </p>
+<div> Note: Make sure the project ID is consistent with the current environment. If not, click <code>Unlink project</code> and create a new Unity project ID. </div>
+</li>
+<li><p>Create a <code>Game Settings.asset</code> file.</p>
+<!-- ![](images/Create-a-Game-Settings-file.png) -->
+<p><img src="images/Create-a-Game-Settings-file.png" width="300px" align="middle"></p>
+ 
+</li>
+<li><p>Click the <code>Game Settings.asset</code> file under <code>Assets &gt; Plugins &gt; UnityChannel &gt; UdpSupport &gt; Resources</code> and generate a Unity client and test accounts.</p>
+<!-- ![](images/Generate-a-Unity-client-and-test-accounts.png) -->
+<p><img src="images/Unity-clent-updated.png" width="400px"></p>
+ 
+<p>In the above screenshot, you may need to use the following fields in <code>UDP Client Settings</code>:</p>
+</li>
+</ol>
+<ul>
+<li><code>Client ID</code> is the issued client identifier. </li>
+<li><code>Client RSA Public Key</code> is used to validate the purchase signature for UDP.</li>
+<li><code>Client Secret</code> is the key to encrypting the receipt sent to developers’ server (Callback URL).</li>
+<li><code>Callback URL</code> provides your own server to receive the stores’ callbacks.</li>
+</ul>
+<div> Note: <code>Client Key</code> is currently only used in initializing the SDK for UDP.</div>
+
+<h2><span id="configuring-the-iap-for-udp">Configuring the IAP for UDP</span><a href="#configuring-the-iap-for-udp" class="header-anchor">#</a></h2><p>Take the following steps to configure the IAP for UDP:</p>
+<ol>
+<li><p>Choose <code>IAP Catalog</code> (<code>Window</code> &gt; <code>Unity UDP</code> &gt; <code>IAP Catalog</code>). </p>
+</li>
+<li><p>Input your product information and click <code>Create Product</code> to sync with the server. To add more products, Click <code>Add Product Draft</code>.<br><div> Note: Specify the product price, or players can’t purchase products in game stores.</div></p>
+<!-- ![](images/IAP-Catalog.png) -->
+<p><img src="images/IAP-Catalog-updated.png" width="500px"></p>
+ 
+</li>
+<li><p>Click the <code>GameManager</code> GameObject in <code>Hierarchy</code> and enter the slugs of your products into <code>Product_1</code> and <code>Product_2</code>. You can add more products using the <code>GameManager.cs</code> file.</p>
+<!-- ![](images/GameManager.png) -->
+<p><img src="images/GameManager.png" width="400px"></p>
+ 
+</li>
+</ol>
+<h2><span id="testing-the-sdk-for-udp">Testing the SDK for UDP</span><a href="#testing-the-sdk-for-udp" class="header-anchor">#</a></h2><p>After you complete the configuration, test the SDK for UDP, as follows:</p>
+<ol>
+<li><p>Open the <code>SampleScene.scene</code> asset to show the demo. </p>
+</li>
+<li><p>Build and open the demo.</p>
+</li>
+<li><p>Click <code>Init</code> and log in with a test account. </p>
+<!-- ![](images/UDP-Login.png) -->
+<p><img src="images/UDP-Login.png" width="300px"></p>
+
+</li>
+<li><p>Click <code>Buy</code> or <code>Buy&amp;Consume</code> to buy products. You can see the purchase information on the user interface. </p>
+<!-- ![](images/UDP-Purchase-22.png) -->
+<p><img src="images/UDP-Purchase-22.png" width="300px"></p>
+
+</li>
+<li><p>If the purchased item hasn’t been consumed, you can’t purchase it again.</p>
+<!-- ![](images/UDP-PurchaseError-24.png) -->
+<p><img src="images/UDP-PurchaseError-24.png" width="300px"></p>
+
+</li>
+<li><p>Click <code>QueryInventory</code> to see all the products and purchases and click <code>Query&amp;Consume</code> to consume the unconsumed purchases.</p>
+<!-- ![](images/UDP-Query-18.png) -->
+<p><img src="images/UDP-Query-18.png" width="300px"></p>
+</li>
+</ol>
+<h2><span id="publishing-your-game-to-a-partner-store-with-test-accounts">Publishing your game to a partner store with test accounts</span><a href="#publishing-your-game-to-a-partner-store-with-test-accounts" class="header-anchor">#</a></h2><p>After you have generated a Unity client and test accounts, you can publish your game to a partner store with the test accounts. </p>
+<ol>
+<li>In the <code>Inspector</code> tab of the <code>GameSetting.asset</code> file, click <code>See More in Browser</code>.</li>
+<li>Choose your game in the Portal and fill in the game information.</li>
+<li>Choose <code>PUBLISH GAME</code>&gt;<code>Test Accounts</code>.<br><img src="images/publish-gstore.png" width="500px"></li>
+<li>Sync your test account to a partner store.<br><img src="images/test-accounting-setting.png" width="500px"></li>
+</ol>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Unity Technology</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/udp/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Unity Technology</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/udp/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/udp/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/udp/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/udp/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/udp/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/udp/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/udp/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/udp/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/udp/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/udp/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/udp/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
