@@ -79,22 +79,20 @@
 
 
 
-<meta name="description" content="UDP is integrated with Cloud Build. You can upload your game to Cloud Build and push the game from Cloud Build to UDP. Pushing the Project to the UDP portal#In the Editor, enable Cloud Build through t">
+<meta name="description" content="If you want to use Unity IAP, set up Unity IAP according to Setting Up Unity IAP.  Setting up Unity IAP for UDP#To configure the IAP cataolog, select IAP Catalog. You might notice that there is anoth">
 <meta property="og:type" content="website">
-<meta property="og:title" content="UDP Cloud Deployment integration">
-<meta property="og:url" content="https://unitytech.github.io/udp/UDP-Cloud-Deployment-integration/index.html">
+<meta property="og:title" content="Technical integration (with Unity IAP)">
+<meta property="og:url" content="https://unitytech.github.io/udp/technical-integration-IAP/index.html">
 <meta property="og:site_name" content="Unity Distribution Platform">
-<meta property="og:description" content="UDP is integrated with Cloud Build. You can upload your game to Cloud Build and push the game from Cloud Build to UDP. Pushing the Project to the UDP portal#In the Editor, enable Cloud Build through t">
+<meta property="og:description" content="If you want to use Unity IAP, set up Unity IAP according to Setting Up Unity IAP.  Setting up Unity IAP for UDP#To configure the IAP cataolog, select IAP Catalog. You might notice that there is anoth">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://unitytech.github.io/udp/UDP-Cloud-Deployment-integration/images/Uploading-Cloud-Build-the-Editor.png">
-<meta property="og:image" content="https://unitytech.github.io/udp/UDP-Cloud-Deployment-integration/images/Uploading-Cloud-Build-Developer-Dashboard.png">
-<meta property="og:image" content="https://unitytech.github.io/udp/UDP-Cloud-Deployment-integration/images/Pushing-hosted-build-UDP-Editor.png">
-<meta property="og:image" content="https://unitytech.github.io/udp/UDP-Cloud-Deployment-integration/images/Pushing-hosted-build-UDP-dashboard.png">
-<meta property="og:updated_time" content="2018-05-28T03:04:57.547Z">
+<meta property="og:image" content="https://unitytech.github.io/udp/technical-integration-IAP/images/UDP-IAP-catalog.png">
+<meta property="og:image" content="https://unitytech.github.io/udp/technical-integration-IAP/images/IAP-IAP-catalog.png">
+<meta property="og:updated_time" content="2018-06-20T02:38:54.506Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UDP Cloud Deployment integration">
-<meta name="twitter:description" content="UDP is integrated with Cloud Build. You can upload your game to Cloud Build and push the game from Cloud Build to UDP. Pushing the Project to the UDP portal#In the Editor, enable Cloud Build through t">
-<meta name="twitter:image" content="https://unitytech.github.io/udp/UDP-Cloud-Deployment-integration/images/Uploading-Cloud-Build-the-Editor.png">
+<meta name="twitter:title" content="Technical integration (with Unity IAP)">
+<meta name="twitter:description" content="If you want to use Unity IAP, set up Unity IAP according to Setting Up Unity IAP.  Setting up Unity IAP for UDP#To configure the IAP cataolog, select IAP Catalog. You might notice that there is anoth">
+<meta name="twitter:image" content="https://unitytech.github.io/udp/technical-integration-IAP/images/UDP-IAP-catalog.png">
 
 
 
@@ -124,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://unitytech.github.io/udp/UDP-Cloud-Deployment-integration/"/>
+  <link rel="canonical" href="https://unitytech.github.io/udp/technical-integration-IAP/"/>
 
 
 
 
 
-  <title>UDP Cloud Deployment integration | Unity Distribution Platform</title>
+  <title>Technical integration (with Unity IAP) | Unity Distribution Platform</title>
   
 
 
@@ -240,7 +238,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">UDP Cloud Deployment integration</h1>
+	<h1 class="post-title" itemprop="name headline">Technical integration (with Unity IAP)</h1>
 
 
 
@@ -252,28 +250,12 @@
       <div class="post-body">
         
         
-          <p><br><br>UDP is integrated with Cloud Build. You can upload your game to Cloud Build and push the game from Cloud Build to UDP.</p>
-<h2><span id="pushing-the-project-to-the-udp-portal">Pushing the Project to the UDP portal</span><a href="#pushing-the-project-to-the-udp-portal" class="header-anchor">#</a></h2><p>In the Editor, enable Cloud Build through the Unity Services window (see documentation on Cloud Build implementation).</p>
-<h3><span id="upload-the-build">Upload the build</span><a href="#upload-the-build" class="header-anchor">#</a></h3><p>Upload your build to the build history for your project, using one of the following methods:</p>
-<h4><span id="from-the-editor">From the Editor:</span><a href="#from-the-editor" class="header-anchor">#</a></h4><ol>
-<li>In the <strong>Cloud Build Services</strong> window, if you haven’t uploaded any build before, select <strong>Upload Build</strong>. Otherwise, select <strong>Manage Target Builds</strong> &gt; <strong>Add New Target</strong>.</li>
-<li>In the <strong>TARGET SETUP</strong> menu, set the <strong>PLATFORM</strong> field to your intended platform and enter a useful <strong>TARGET LABEL</strong>. Then select <strong>Next: Save</strong>.</li>
-<li>Select <strong>Start Cloud Build</strong>, then select the target build you just created.<br><img src="images/Uploading-Cloud-Build-the-Editor.png" alt="alt_text" title="Uploading a Cloud Build via the Editor"></li>
-</ol>
-<h4><span id="from-the-unity-cloud-build-developer-dashboard">From the :</span><a href="#from-the-unity-cloud-build-developer-dashboard" class="header-anchor">#</a></h4><ol>
-<li>Navigate to your Project’s <strong>Cloud Build History</strong>.</li>
-<li>Select <strong>Upload</strong>, then select the APK file you built from the Editor.</li>
-</ol>
-<p><img src="images/Uploading-Cloud-Build-Developer-Dashboard.png" alt="alt_text" title="Uploading a Cloud Build via the Developer Dashboard."></p>
-<h3><span id="push-the-build-to-udp">Push the build to UDP</span><a href="#push-the-build-to-udp" class="header-anchor">#</a></h3><p>Push the the hosted build to the UDP portal, using one of two methods:</p>
-<h4><span id="from-the-editor">From the Editor:</span><a href="#from-the-editor" class="header-anchor">#</a></h4><p>In the Cloud Build Services window, locate the desired build from the build history timeline and select <strong>Push to UDP</strong>. Verify that you want to push, and that the action completes.</p>
-<p><img src="images/Pushing-hosted-build-UDP-Editor.png" alt="alt_text" title="Pushing a hosted build to UDP via the Editor."></p>
-<h4><span id="from-the-unity-cloud-build-developer-dashboard">From the :</span><a href="#from-the-unity-cloud-build-developer-dashboard" class="header-anchor">#</a></h4><ol>
-<li>Navigate to your Project’s <strong>Cloud Build History</strong>.</li>
-<li>Select <strong>Download .APK</strong> file, then select <strong>Push to UDP</strong> from the dropdown menu.</li>
-</ol>
-<p><img src="images/Pushing-hosted-build-UDP-dashboard.png" alt="alt_text" title="Pushing a hosted build to UDP via the Unity Developer Dashboard."></p>
-<p><strong>Note</strong>: Only the owner of the organization that your project is under will be able to deploy to UDP.</p>
+          <p><br></p>
+<p>If you want to use Unity IAP, set up Unity IAP according to Setting Up Unity IAP. </p>
+<h2><span id="setting-up-unity-iap-for-udp">Setting up Unity IAP for UDP</span><a href="#setting-up-unity-iap-for-udp" class="header-anchor">#</a></h2><p>To configure the IAP cataolog, select IAP Catalog.<br><!-- ![](images/UDP-IAP-catalog.png) --><br><img src="images/UDP-IAP-catalog.png" width="400px"></p>
+<p>You might notice that there is another IAP Catalog under Unity UDP. The IAP Catalog under Unity UDP is a similar function developed in UDP. So please make sure they have the same configuration.</p>
+<!-- ![](images/IAP-IAP-catalog.png) -->
+<p><img src="images/IAP-IAP-catalog.png" width="400px"></p>
 
         
       </div>
