@@ -86,8 +86,6 @@
 <meta property="og:site_name" content="Unity Distribution Platform">
 <meta property="og:description" content="The SDK for UDP is an easy way to integrate your game with UDP. Before publishing your game via unity distribution platform (UDP), configure the SDK and test your configuration. Here are the things t">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/login-mac.png">
-<meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/login-windows.png">
 <meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/Create-a-Game-Settings-file.png">
 <meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/Unity-clent-updated.png">
 <meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/IAP-Catalog-updated.png">
@@ -97,12 +95,12 @@
 <meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/UDP-PurchaseError-24.png">
 <meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/UDP-Query-18.png">
 <meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/publish-gstore.png">
-<meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/test-accounting-setting.png">
-<meta property="og:updated_time" content="2018-06-20T02:37:50.725Z">
+<meta property="og:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/Publish-information.png">
+<meta property="og:updated_time" content="2018-07-05T09:07:25.424Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Configuring SDK for UDP">
 <meta name="twitter:description" content="The SDK for UDP is an easy way to integrate your game with UDP. Before publishing your game via unity distribution platform (UDP), configure the SDK and test your configuration. Here are the things t">
-<meta name="twitter:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/login-mac.png">
+<meta name="twitter:image" content="https://unitytech.github.io/udp/configuring-the-SDK-for-UDP/images/Create-a-Game-Settings-file.png">
 
 
 
@@ -222,6 +220,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-marketing">
+          <a href="/udp/marketing/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            marketing
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -269,16 +277,7 @@
 </ul>
 <h2><span id="generating-a-unity-client-and-test-accounts">Generating a Unity client and test accounts</span><a href="#generating-a-unity-client-and-test-accounts" class="header-anchor">#</a></h2><p>You can manage your game in UDP via a Unity client and test your game with test accounts. Take the following steps to generate a Unity client and test accounts: </p>
 <ol>
-<li><p>Open Unity in the <code>INT</code>， <code>STAGING</code>，or <code>PROD</code> environment. In the <code>PROD</code> environment, just open the Unity Editor; in the <code>INT</code> or <code>STAGING</code> environment, open Unity with the following demands:</p>
-<blockquote>
-<p>For Mac OS:</p>
-<!-- ![](images/login-mac.png) -->
-<p><img src="images/login-mac.png" width="600px"><br>For Windows:</p>
-<!-- ![](images/login-windows.png) -->
-<p><img src="images/login-windows.png" width="600px"></p>
-</blockquote>
-</li>
-<li><p>Log in with an <code>INT</code>， <code>STAGING</code> or <code>PROD</code> account. If you haven’t got an <code>INT</code> or <code>STAGING</code> account, register one in <a href="https://id-int.unity.com" target="_blank" rel="noopener">INT ID portal</a>, <a href="https://id-staging.unity.com" target="_blank" rel="noopener">STAGING ID Portal</a>, or <a href="https://id.unity.com" target="_blank" rel="noopener">PROD ID Portal</a>.</p>
+<li><p>Open Unity and log in with a Unity account. If you don’t have a Unity account yet, register one in <a href="https://id.unity.com" target="_blank" rel="noopener">https://id.unity.com</a>. </p>
 </li>
 <li><p>Create or open a project and import the SDK. The SDK can be downloaded from <a href="https://unitytech.github.io/udp/">https://unitytech.github.io/udp/</a>. </p>
 </li>
@@ -350,12 +349,14 @@
 <p><img src="images/UDP-Query-18.png" width="300px"></p>
 </li>
 </ol>
-<h2><span id="publishing-your-game-to-a-partner-store-with-test-accounts">Publishing your game to a partner store with test accounts</span><a href="#publishing-your-game-to-a-partner-store-with-test-accounts" class="header-anchor">#</a></h2><p>After you have generated a Unity client and test accounts, you can publish your game to a partner store with the test accounts. </p>
+<h2><span id="publishing-your-game-to-a-partner-store-with-test-accounts">Publishing your game to a partner store with test accounts</span><a href="#publishing-your-game-to-a-partner-store-with-test-accounts" class="header-anchor">#</a></h2><p>After you have generated a Unity client and test accounts, you can publish your game to a partner store with the test accounts. Currently the supported stores include Google, Amazon, Samsung, CloudMoolah, and Xiaomi.</p>
 <ol>
-<li>In the <code>Inspector</code> tab of the <code>GameSetting.asset</code> file, click <code>See More in Browser</code>.</li>
-<li>Choose your game in the Portal and fill in the game information.</li>
-<li>Choose <code>PUBLISH GAME</code>&gt;<code>Test Accounts</code>.<br><img src="images/publish-gstore.png" width="500px"></li>
-<li>Sync your test account to a partner store.<br><img src="images/test-accounting-setting.png" width="500px"></li>
+<li>In the Inspector tab of the GameSetting.asset file, click See More in Browser.</li>
+<li>Log in and select your game in the Portal.</li>
+<li>In the DASHBOARD tab, you can see the overall situation of your game.</li>
+<li>In the GAME INFO tab, enter your game information.</li>
+<li>In the PUBLISH GAME tab, add the store you want to push to.<br><img src="images/publish-gstore.png" width="500px"><br>Specify the Store, Package Name, and Public key.<br><img src="images/Publish-information.png" width="500px"></li>
+<li>Publish your game to the specified store.</li>
 </ol>
 
         
