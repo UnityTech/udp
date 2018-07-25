@@ -92,7 +92,7 @@
 <meta property="og:image" content="https://unitytech.github.io/udp/flow-integration-with-UDP/images/standalone-game-purchase.png">
 <meta property="og:image" content="https://unitytech.github.io/udp/flow-integration-with-UDP/images/online-game-purchase.png">
 <meta property="og:image" content="https://unitytech.github.io/udp/flow-integration-with-UDP/images/standalone-game-consume.png">
-<meta property="og:updated_time" content="2018-05-28T09:23:45.662Z">
+<meta property="og:updated_time" content="2018-07-25T10:38:41.762Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The flow of Integrating games with UDP">
 <meta name="twitter:description" content="To integrate your games with UDP, follow these steps:  Initialize UDP SDK Query the UDP inventory to check for payment Send a purchase request to UDP Send a consume request to UDP  Initializating UDP">
@@ -207,6 +207,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-quick-guide">
+          <a href="/udp/Quick-Guide/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            Quick Guide
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-document">
           <a href="/udp/UDP-Guide/" rel="section">
             
@@ -254,35 +264,33 @@
       <div class="post-body">
         
         
-          <p><br></p>
-<p>To integrate your games with UDP, follow these steps:</p>
+          <p>To integrate your games with UDP, follow these steps:</p>
 <ol>
 <li>Initialize UDP SDK</li>
 <li>Query the UDP inventory to check for payment</li>
 <li>Send a purchase request to UDP</li>
 <li>Send a consume request to UDP</li>
 </ol>
-<h2><span id="initializating-udp-sdk">Initializating UDP SDK</span><a href="#initializating-udp-sdk" class="header-anchor">#</a></h2><p>To initialize UDP SDK, your game provides the Unity client ID and Unity client key to the UDP SDK. The initialization listener will let you know whether the initialization succeeds by returning a success or failure message.<br><!-- ![](images/standalone-game-initialize.png) --><br><img src="images/standalone-game-initialize.png" width="200px"></p>
-<h2><span id="checking-the-payment">Checking the payment</span><a href="#checking-the-payment" class="header-anchor">#</a></h2><p>To prevent a product being paid for but not delivered, your game needs to query the partner stores’ inventory after the initialization is completed. This allows you to, for example, restore non-consumable products when your game is reinstalled. </p>
-<p>Your game checks whether there is an unconsumed product by calling the QueryInventory method immediately after the initialization succeeds. </p>
-<!-- ![](images/standalone-game-query.png) -->
-<p><img src="images/standalone-game-query.png" width="200px"></p>
-<p>If your game is an online game, your game server can check the order status in the Unity Channel server. </p>
-<!-- ![](images/online-game-queryintentory.png) -->
-<p><img src="images/online-game-queryinventory.png" width="360px"></p>
-<p>See Querying for specified products or all unconsumed products for additional details. </p>
-<h2><span id="sending-a-purchase-request-to-udp">Sending a purchase request to UDP</span><a href="#sending-a-purchase-request-to-udp" class="header-anchor">#</a></h2><p>Your game start a purchase by calling the Purchase method. The UDP automatically checks the purchase receipt to see whether the purchase is valid.<br><!-- ![](images/standalone-game-purchase.png) --><br><img src="images/standalone-game-purchase.png" width="200px"></p>
-<p>If your game is an online game, you can verify the purchase on your game server, as follows:</p>
+<h2><span id="initializating-udp-sdk">Initializating UDP SDK</span><a href="#initializating-udp-sdk" class="header-anchor">#</a></h2><p>To initialize UDP SDK, your game provides the Unity client ID and Unity client key to the UDP SDK. The initialization listener will let you know whether the initialization succeeds by returning a success or failure message.</p>
+<p><img src="images/standalone-game-initialize.png" width="300px"></p>
+<h2><span id="checking-the-payment">Checking the payment</span><a href="#checking-the-payment" class="header-anchor">#</a></h2><p>To prevent a product being paid for but not delivered, your game needs to query the partner stores’ inventory after the initialization is completed. This allows you to, for example, restore non-consumable products when your game is reinstalled.</p>
+<p>Your game checks whether there is an unconsumed product by calling the QueryInventory method immediately after the initialization succeeds.</p>
+<p><img src="images/standalone-game-query.png" width="300px"></p>
+<p>If your game is an online game, your game server can check the order status in the Unity Channel server.</p>
+<p><img src="images/online-game-queryinventory.png" width="300px"></p>
+<p>See Querying for specified products or all unconsumed products for additional details.</p>
+<h2><span id="sending-a-purchase-request-to-udp">Sending a purchase request to UDP</span><a href="#sending-a-purchase-request-to-udp" class="header-anchor">#</a></h2><p>Your game start a purchase by calling the Purchase method. The UDP automatically checks the purchase receipt to see whether the purchase is valid.</p>
+<p><img src="images/standalone-game-purchase.png" width="300px"></p>
+<p>If your game is an online game, you can verify the purchase on your gameserver, as follows:</p>
 <ul>
-<li>Receiving the purchase callback notification from the UDP server or directly from the channel server which is optionally of some channels. </li>
-<li>Querying the order from the UDP server with a signature. For some channel, your server need to send an acknowledgement of the callback notification. </li>
+<li>Receiving the purchase callback notification from the UDP server or directly from the channel server which is optionally of some channels.</li>
+<li>Querying the order from the UDP server with a signature. For some channel, your server need to send an acknowledgement of the callback notification.</li>
 </ul>
-<!-- ![](images/online-game-purchase.png) -->
-<p><img src="images/online-game-purchase.png" width="360px"></p>
+<p><img src="images/online-game-purchase.png" width="300px"></p>
 <h2><span id="sending-a-consume-request-to-the-udp-sdk">Sending a consume request to the UDP SDK</span><a href="#sending-a-consume-request-to-the-udp-sdk" class="header-anchor">#</a></h2><p>To complete the consumable purchase, your game sends a Consume request to the UDP SDK. We recommend that your game delivers the product after it has been consumed, or the product may be delivered repeatedly.</p>
 <p>Note: This step is only necessary when the product is consumable.</p>
-<!-- ![](images/standalone-game-consume.png) -->
-<p><img src="images/standalone-game-consume.png" width="200px"><br>See Consuming a purchase for additional details.</p>
+<p><img src="images/standalone-game-consume.png" width="300px"></p>
+<p>See Consuming a purchase for additional details.</p>
 
         
       </div>
