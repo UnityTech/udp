@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="When you develop your game with the Unity Editor, you can use Unity Distribution Platform (UDP) to manage your game and the in-app purchases (IAP). UDP is a game distribution platform that enables you">
+<meta name="description" content="Content# Overview of Unity Distribution Platform  Configuring and building your game for UDP Implementing IAP Managing your game on UDP portal Publishing your game to partner stores  Overview of Unit">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Developer&#39;s Guide for Unity Distribution Platform">
+<meta property="og:title" content="Unity Distribution Platform">
 <meta property="og:url" content="https://unitytech.github.io/udp/UDP-Guide/index.html">
 <meta property="og:site_name" content="Unity Distribution Platform">
-<meta property="og:description" content="When you develop your game with the Unity Editor, you can use Unity Distribution Platform (UDP) to manage your game and the in-app purchases (IAP). UDP is a game distribution platform that enables you">
+<meta property="og:description" content="Content# Overview of Unity Distribution Platform  Configuring and building your game for UDP Implementing IAP Managing your game on UDP portal Publishing your game to partner stores  Overview of Unit">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-01T03:16:26.580Z">
+<meta property="og:updated_time" content="2018-08-20T00:47:35.570Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Developer&#39;s Guide for Unity Distribution Platform">
-<meta name="twitter:description" content="When you develop your game with the Unity Editor, you can use Unity Distribution Platform (UDP) to manage your game and the in-app purchases (IAP). UDP is a game distribution platform that enables you">
+<meta name="twitter:title" content="Unity Distribution Platform">
+<meta name="twitter:description" content="Content# Overview of Unity Distribution Platform  Configuring and building your game for UDP Implementing IAP Managing your game on UDP portal Publishing your game to partner stores  Overview of Unit">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <title>Developer's Guide for Unity Distribution Platform | Unity Distribution Platform</title>
+  <title> | Unity Distribution Platform</title>
   
 
 
@@ -245,7 +245,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">Developer's Guide for Unity Distribution Platform</h1>
+	<h1 class="post-title" itemprop="name headline"></h1>
 
 
 
@@ -257,13 +257,58 @@
       <div class="post-body">
         
         
-          <p><br><br>When you develop your game with the Unity Editor, you can use Unity Distribution Platform (UDP) to manage your game and the in-app purchases (IAP). UDP is a game distribution platform that enables you to configure your game, manage IAP, and publish your game to Unity’s partner stores collectively.</p>
-<p><a href="../flow-integration-with-UDP">The flow of Integrating games with UDP</a><br>Read this document in this session for an overview of integration flows.</p>
-<p><a href="../Setting-up-UDP-SDK">Setting up the UDP SDK</a><br>Learn how to configure the UDP SDK.</p>
-<p><a href="../Setting-up-UDP-Portal">Setting up the UDP Portal</a><br>Learn how to configure the UDP portal.</p>
-<p><a href="../technical-integration">Technical integration (without Unity IAP)</a><br>Learn how to implement the technical integration on client and server sides. </p>
-<p><a href="../technical-integration-IAP">Technical integration (with Unity IAP)</a><br>Learn how to perform the technical integration when Unity IAP is integrated.  </p>
-<p><a href="../UDP-Cloud-Deployment-integration">UDP Cloud Deployment integration</a><br>Learn how to push your project to UDP from the UDP Cloud.</p>
+          <p><br></p>
+<h1><span id="content">Content</span><a href="#content" class="header-anchor">#</a></h1><ul>
+<li><a href="../UDP-Guide">Overview of Unity Distribution Platform </a></li>
+<li><a href="../Configuring-and-building-your-game-for-UDP">Configuring and building your game for UDP</a></li>
+<li><a href="../Implementing-IAP">Implementing IAP</a></li>
+<li><a href="../Managing-your-game-on-UDP-portal">Managing your game on UDP portal</a></li>
+<li><a href="../Publishing-your-game-from-UDP-portal-to-stores">Publishing your game to partner stores</a></li>
+</ul>
+<h2><span id="overview-of-unity-distribution-platform">Overview of Unity Distribution Platform</span><a href="#overview-of-unity-distribution-platform" class="header-anchor">#</a></h2><p>When you develop your game with the Unity Editor, you can use Unity Distribution Platform (UDP) to manage your game and in-app purchases (IAP). UDP is a game distribution platform that enables you to configure your games, manage IAP, and publish your games to Unity’s partner stores collectively. Unity’s partner stores includes Google, Amazon, Samsung, CloudMoolah, and Xiaomi.</p>
+<p>Publishing your game to partner stores is a 4-step process:</p>
+<ul>
+<li>Configure and build your game for UDP</li>
+<li>Implement IAP</li>
+<li>Manage your game on UDP portal</li>
+<li>Publish your game to partner stores </li>
+</ul>
+<p><em>Prerequisites</em></p>
+<ul>
+<li>UDP is supported in Unity 5.6.1 or higher. </li>
+<li>Currently, UDP only supports android. </li>
+</ul>
+<p><em>Also See</em></p>
+<ul>
+<li>For FAQs and more information on UDP, visit the FAQ.</li>
+<li>For comprehensive information on all the topics covered in this document, visit Unity IAP UDP Integration Guide.</li>
+</ul>
+<h2><span id="configuring-and-building-your-games-for-udp">Configuring and building your games for UDP</span><a href="#configuring-and-building-your-games-for-udp" class="header-anchor">#</a></h2><p>Building your games for UDP requires the following steps:</p>
+<ol>
+<li>Import UDP SDK<br>If you are currently using Unity IAP, enable Unity IAP and install <a href="https://unitytech.github.io/udp/2018/08/14/UDP-SDK-Beta-v0-3/UnityIAP-with-UDP-Beta-v0.3.unitypackage">Unity SDK Package (with Unity IAP)</a>. If you are not currently using Unity IAP, install <a href="https://unitytech.github.io/udp/2018/08/14/UDP-SDK-Beta-v0-3/UDP-SDK-Beta-v0.3-with-Sample.unitypackage">Stand-alone UDP SDK</a>.</li>
+<li>Generate a Unity client and test accounts<br>In the Unity Editor, select <code>Window</code> &gt; <code>Unity UDP</code> &gt; <code>Game Settings</code>.<br>Select the Game Settings to view its Inspector, then select Generate Unity Client to populate credentials UDP will need for client-to-server communications.<br>In the Inspector of the Game Settings, generate test accounts by providing emails and passwords. </li>
+<li>Build your games<br>Create a local Android APK build (in the Editor, File &gt; Build Settings… &gt; Android &gt; Build; see documentation on building for Android).</li>
+</ol>
+<p>For detailed information, please refer to <a href="../Configuring-and-building-your-game-for-UDP">Configuring and building your game for UDP</a>.</p>
+<h2><span id="implementing-iap">Implementing IAP</span><a href="#implementing-iap" class="header-anchor">#</a></h2><p>You can choose either UDP IAP or Unity IAP to implement in-app purchases in your app.<br>If you choose UDP IAP, configure the IAP catalog through the IAP GUI (<code>Window</code> &gt; <code>Unity UDP</code> &gt; <code>IAP Catalog</code>). </p>
+<p>If you choose Unity IAP, configure the IAP catalogs of Unity UDP (Window &gt; Unity UDP &gt; IAP Catalog) and Unity IAP (<code>Window</code> &gt; <code>Unity IAP</code> &gt; <code>IAP Catalog</code>). Make sure the two IAP catalogs have the same setting.</p>
+<p>You can also manage IAP items on UDP portal. </p>
+<p>For detailed information, please refer to <a href="../Implementing-IAP">Implementing IAP</a>.</p>
+<h2><span id="managing-your-game-on-udp-portal">Managing your game on UDP portal</span><a href="#managing-your-game-on-udp-portal" class="header-anchor">#</a></h2><p>With UDP portal, you can:</p>
+<ul>
+<li>Create and edit your profile</li>
+<li>Create and edit your games </li>
+<li>Push your game file to UDP portal</li>
+<li>Create in-app purchasable items</li>
+</ul>
+<p>For detailed information, please refer to <a href="../Managing-your-game-on-UDP-portal">Managing your game on UDP portal</a>.</p>
+<h2><span id="publishing-your-game-to-partner-stores">Publishing your game to partner stores</span><a href="#publishing-your-game-to-partner-stores" class="header-anchor">#</a></h2><p>Before you push your game to partner stores, make sure you have taken the following steps:</p>
+<ul>
+<li>Maintain your profile.</li>
+<li>Add your stores.</li>
+</ul>
+<p>On the UDP portal,navigate to your project, then choose <code>PUBLISH GAME</code>. Identify your game, select the stores you wish to publish to, and choose <code>Publish</code>.</p>
+<p>For detailed information, please refer to <a href="../Publishing-your-game-from-UDP-portal-to-stores">Publishing your game to partner stores</a>.</p>
 <div><br><div class="toc">
 
 <!-- toc -->
@@ -324,7 +369,7 @@
               
                 <a href="/udp/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
