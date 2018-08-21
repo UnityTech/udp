@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Unity Distribution Platform">
 <meta property="og:description" content="Implementing UDP IAP on the server side#The server-side integration consists of the following steps:  Query orders Receive callback notifications Send acknowledgeSending acknowledgements (optional)me">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-17T10:04:04.242Z">
+<meta property="og:updated_time" content="2018-08-21T09:24:28.249Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity Distribution Platform">
 <meta name="twitter:description" content="Implementing UDP IAP on the server side#The server-side integration consists of the following steps:  Query orders Receive callback notifications Send acknowledgeSending acknowledgements (optional)me">
@@ -578,54 +578,6 @@
 </tr>
 </tbody>
 </table>
-<h3><span id="sending-acknowledgements-optional">Sending acknowledgements (optional)</span><a href="#sending-acknowledgements-optional" class="header-anchor">#</a></h3><p>After your game server receives a callback notification, it needs to send an acknowledgement to the Unity server. Implement an HTTP GET request and use the query parameters in the following table.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET</span><br><span class="line">/v1/order-attempts/callback/ack?cpOrderId=&lt;cpOrderId&gt;&amp;clientId=&lt;clientId&gt;&amp;orderQueryToken=&lt;orderQueryToken&gt;&amp;sign=&lt;sign&gt;</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>Attribute Name</th>
-<th>Format</th>
-<th>Required/Optional</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cpOrderId</td>
-<td>String</td>
-<td>Required</td>
-<td>order id assigned by game , or Unity generated id if game will not generate it</td>
-<td></td>
-<td>66mea52wne</td>
-</tr>
-<tr>
-<td>clientId</td>
-<td>String</td>
-<td>Required</td>
-<td>client id assigned by Unity after onboarding</td>
-<td>String</td>
-<td>Q4AnJDW2-rxLAPujqrk1zQ</td>
-</tr>
-<tr>
-<td>orderQueryToken</td>
-<td>String</td>
-<td>Required</td>
-<td>order query token returned by client SDK when finishing purchase</td>
-<td>String</td>
-<td>ebaseakc=</td>
-</tr>
-<tr>
-<td>sign</td>
-<td>String</td>
-<td>Required</td>
-<td>md5 with cpOrderId, clientId, orderQueryToken and Unity Client Secret. Check the algorithm in the end of the doc</td>
-<td>String</td>
-<td>7277da780d1102864ee5818c2730c74e</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Response: Status 200</span><br></pre></td></tr></table></figure>
 
         
       </div>
