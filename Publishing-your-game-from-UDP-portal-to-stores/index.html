@@ -86,17 +86,14 @@
 <meta property="og:site_name" content="Unity Distribution Platform">
 <meta property="og:description" content="Publishing Your Game from UDP Portal to Stores#With UDP portal, you can publish your game to a partner store. Currently the supported stores include Google, Amazon, Samsung, CloudMoolah, and Xiaomi.">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://unitytech.github.io/udp/images/Add-Store.png">
-<meta property="og:image" content="https://unitytech.github.io/udp/images/Choose-Store.png">
-<meta property="og:image" content="https://unitytech.github.io/udp/images/Edit-Store.png">
-<meta property="og:image" content="https://unitytech.github.io/udp/images/Configure-Store.png">
-<meta property="og:image" content="https://unitytech.github.io/udp/images/Push-to-Store.png">
-<meta property="og:image" content="https://unitytech.github.io/udp/images/Dashboard.png">
-<meta property="og:updated_time" content="2018-08-20T00:42:40.339Z">
+<meta property="og:image" content="https://unitytech.github.io/udp/images/select-stores.png">
+<meta property="og:image" content="https://unitytech.github.io/udp/images/publish-to-stores.png">
+<meta property="og:image" content="https://unitytech.github.io/udp/images/store-status.png">
+<meta property="og:updated_time" content="2018-09-07T03:23:17.471Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity Distribution Platform">
 <meta name="twitter:description" content="Publishing Your Game from UDP Portal to Stores#With UDP portal, you can publish your game to a partner store. Currently the supported stores include Google, Amazon, Samsung, CloudMoolah, and Xiaomi.">
-<meta name="twitter:image" content="https://unitytech.github.io/udp/images/Add-Store.png">
+<meta name="twitter:image" content="https://unitytech.github.io/udp/images/select-stores.png">
 
 
 
@@ -267,15 +264,20 @@
           <p><br></p>
 <h2><span id="publishing-your-game-from-udp-portal-to-stores">Publishing Your Game from UDP Portal to Stores</span><a href="#publishing-your-game-from-udp-portal-to-stores" class="header-anchor">#</a></h2><p>With UDP portal, you can publish your game to a partner store. Currently the supported stores include Google, Amazon, Samsung, CloudMoolah, and Xiaomi.</p>
 <ol>
-<li><p>Select your game in the Portal.</p>
+<li><p>Select your game on the UDP portal.</p>
 </li>
-<li><p>In the PUBLISH GAME tab, add the store you want to publish to.<br><img src="../images/Add-Store.png" width="500px/"><br>Choose the Store and Package Name. After you click Add, you will be redirected to the website of CloudMoolah, where you fill in the information of your company and bank account.<br><img src="../images/Choose-Store.png" width="500px/"></p>
+<li><p>In the <code>PUBLISH</code> panel, select the stores you want to publish to and configure these stores.<br><img src="../images/select-stores.png" width="500px/"></p>
 </li>
-<li>Choose Edit to configure the store.<br><img src="../images/Edit-Store.png" width="500px/"></li>
-<li>Populate the following fields.<br>..<em> <code>Target SDK</code>: Unless you have a special requirment, choose the latest version.<br>..</em> <code>Available Step</code>: If you choose Pack, UDP only pack the game; If you choose Sync to Test, UDP pack the game and push it to the testing system of the store; If you choose Sync to Prod, UDP pack the game and push it to the productive system of the store.<br>..<em> <code>Price</code>: Specify the price you assign to the game.<br>..</em> <code>Apk Version</code>, <code>Package Name</code>, <code>AppID</code>, <code>Hash Key</code>, <code>IAP Callback URL</code>, <code>IAP Callback Option</code>: Keep the default setting.<br><img src="../images/Configure-Store.png" width="500px/"></li>
-<li>Publish your game to the store.<br><img src="../images/Push-to-Store.png" width="500px/"></li>
-<li>In the DASHBOARD tab, you can see the overall situation of your publishing tasks.<br>..<em> <code>Pending</code>, which indicates the number of ongoing tasks<br>..</em> <code>Success</code>, which indicates the number of successful tasks<br>..<em> <code>Failed</code>, which indicates the number of failed tasks<br>..</em> <code>Total</code>, which indicates the total number of all tasks<br><img src="../images/Dashboard.png" width="500px/"></li>
+<li>Publish your game to the stores by selecting <code>Publish</code>.<br><img src="../images/publish-to-stores.png" width="500px/"></li>
+<li>In the <code>Status</code> panel, you can see the statuses of your game. </li>
 </ol>
+<ul>
+<li><code>Packed</code>, which indicates that your game has been packed with the SDK from the selected stores.</li>
+<li><code>Synced</code>, which indicates that your game has been packed and synced to the test environment of the selected stores.</li>
+<li><code>Promoted</code>, which indicates that your game has been packed and synced to the productive environment of the selected stores.</li>
+<li><code>Pending</code>, which indicates the packing is ongoing</li>
+<li><code>Failed</code>, which indicates the packing has failed<br><img src="../images/store-status.png" width="500px/"></li>
+</ul>
 
         
       </div>
