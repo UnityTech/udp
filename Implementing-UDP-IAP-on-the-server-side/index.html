@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Implementing UDP IAP on the server side#The server-side integration consists of the following steps:  Query orders Receive callback notifications Send acknowledgeSending acknowledgements (optional)me">
+<meta name="description" content="Implementing UDP IAP on the server side#The server-side integration consists of the following steps:  Query orders Receive callback notifications  Querying Orders#You can query orders by implementing">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Unity Distribution Platform">
 <meta property="og:url" content="https://unitytech.github.io/udp/Implementing-UDP-IAP-on-the-server-side/index.html">
 <meta property="og:site_name" content="Unity Distribution Platform">
-<meta property="og:description" content="Implementing UDP IAP on the server side#The server-side integration consists of the following steps:  Query orders Receive callback notifications Send acknowledgeSending acknowledgements (optional)me">
+<meta property="og:description" content="Implementing UDP IAP on the server side#The server-side integration consists of the following steps:  Query orders Receive callback notifications  Querying Orders#You can query orders by implementing">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-21T09:24:28.249Z">
+<meta property="og:updated_time" content="2018-09-11T06:00:01.904Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity Distribution Platform">
-<meta name="twitter:description" content="Implementing UDP IAP on the server side#The server-side integration consists of the following steps:  Query orders Receive callback notifications Send acknowledgeSending acknowledgements (optional)me">
+<meta name="twitter:description" content="Implementing UDP IAP on the server side#The server-side integration consists of the following steps:  Query orders Receive callback notifications  Querying Orders#You can query orders by implementing">
 
 
 
@@ -262,10 +262,9 @@
 <ul>
 <li>Query orders</li>
 <li>Receive callback notifications</li>
-<li>Send acknowledgeSending acknowledgements (optional)ments</li>
 </ul>
 <h3><span id="querying-orders">Querying Orders</span><a href="#querying-orders" class="header-anchor">#</a></h3><p>You can query orders by implementing an HTTP GET request as follows:</p>
-<p>GET /v1/order-attempts/query?cpOrderId=<cporderid>&amp;clientId=<clientid>&amp;orderQueryToken=<orderquerytoken>&amp;sign=<sign></sign></orderquerytoken></clientid></cporderid></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET https://api-channel.unity.com/v1/order-attempts/query?cpOrderId=&lt;cpOrderId&gt;&amp;clientId=&lt;clientId&gt;&amp;orderQueryToken=&lt;orderQueryToken&gt;&amp;sign=&lt;sign&gt;</span><br></pre></td></tr></table></figure>
 <p>Parameters in the request</p>
 <table>
 <thead>
@@ -450,7 +449,7 @@
 </table>
 <p>Here is a sample:</p>
 <p>Request:</p>
-<p>GET<br>/v1/order-attempts/query?cpOrderId=<66mea52wne>&amp;clientId=<q4anjdw2-rxlapujqrk1zq>&amp;orderQueryToken=<eyjjagfubmvsvhlwzsi6icjgqutfq0hmiiwgimnoyw5uzwxvawqioiairkflrunitf9oegqwnsj9>&amp;sign=<debd0018911d263e23dfb729207b905c></debd0018911d263e23dfb729207b905c></eyjjagfubmvsvhlwzsi6icjgqutfq0hmiiwgimnoyw5uzwxvawqioiairkflrunitf9oegqwnsj9></q4anjdw2-rxlapujqrk1zq></66mea52wne></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET </span><br><span class="line">https://api-channel.unity.com/v1/order-attempts/query?cpOrderId=&lt;66mea52wne&gt;&amp;clientId=&lt;Q4AnJDW2-rxLAPujqrk1zQ&gt;&amp;orderQueryToken=&lt;eyJjaGFubmVsVHlwZSI6ICJGQUtFQ0hMIiwgImNoYW5uZWxVaWQiOiAiRkFLRUNITF9oeGQwNSJ9&gt;&amp;sign=&lt;debd0018911d263e23dfb729207b905c&gt;</span><br></pre></td></tr></table></figure>
 <p>Response:<br>{<br>“createdBy” : “0”,<br>      “updatedBy” : “0”,<br>      “createdTime” : “2017-03-08T06:43:20Z”,<br>      “updatedTime” : “2017-03-08T06:43:20Z”,<br>      “id” : “274877943826”,<br>      “userId” : “274877943822”,<br>      “status” : “SUCCESS”,<br>     “cpOrderId” : “66mea52wne”,<br>      “clientId” : “Q4AnJDW2-rxLAPujqrk1zQ”,<br>      “uid” : “15400813498”,<br>      “productId” : “Product_1”,<br>    “payFee” : 1,<br>      “quantity” : 1,<br>      “paidTime” : “2017-03-08T06:43:20Z”,<br>      “notified” : false,<br>      “currency” : “CNY”,<br>      “country” : “CN”,<br>      “rev” : “1”<br>}</p>
 <h3><span id="receiving-callback-notifications">Receiving callback notifications</span><a href="#receiving-callback-notifications" class="header-anchor">#</a></h3><p>After a purchase succeeds, if you have specified a callback URL, the UDP server notifies the game server with the payment result. Implement an HTTP GET request and accept the following query parameters:</p>
 <table>
