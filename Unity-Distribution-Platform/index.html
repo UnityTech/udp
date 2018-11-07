@@ -79,20 +79,17 @@
 
 
 
-<meta name="description" content="Configuring and building your game for UDP#Configuring UDP SDK#The UDP SDK is an easy way to integrate your game with UDP. To configure the UDP SDK, you need to the following steps: Step 1: Import UD">
+<meta name="description" content="Unity Distribution Platform (UDP) streamlines your entire app distribution process. You can seamlessly build for, and deploy to, the following partner app stores:    Cloud Moolah     Aptoide, OneStore">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Unity Distribution Platform">
-<meta property="og:url" content="https://unitytech.github.io/udp/Configuring-and-building-your-game-for-UDP/index.html">
+<meta property="og:url" content="https://unitytech.github.io/udp/Unity-Distribution-Platform/index.html">
 <meta property="og:site_name" content="Unity Distribution Platform">
-<meta property="og:description" content="Configuring and building your game for UDP#Configuring UDP SDK#The UDP SDK is an easy way to integrate your game with UDP. To configure the UDP SDK, you need to the following steps: Step 1: Import UD">
+<meta property="og:description" content="Unity Distribution Platform (UDP) streamlines your entire app distribution process. You can seamlessly build for, and deploy to, the following partner app stores:    Cloud Moolah     Aptoide, OneStore">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://unitytech.github.io/udp/images/Create-a-Game-Settings-file.png">
-<meta property="og:image" content="https://unitytech.github.io/udp/images/Unity-clent-updated.png">
-<meta property="og:updated_time" content="2018-09-06T15:25:59.273Z">
+<meta property="og:updated_time" content="2018-11-06T08:47:55.183Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity Distribution Platform">
-<meta name="twitter:description" content="Configuring and building your game for UDP#Configuring UDP SDK#The UDP SDK is an easy way to integrate your game with UDP. To configure the UDP SDK, you need to the following steps: Step 1: Import UD">
-<meta name="twitter:image" content="https://unitytech.github.io/udp/images/Create-a-Game-Settings-file.png">
+<meta name="twitter:description" content="Unity Distribution Platform (UDP) streamlines your entire app distribution process. You can seamlessly build for, and deploy to, the following partner app stores:    Cloud Moolah     Aptoide, OneStore">
 
 
 
@@ -122,7 +119,7 @@
 
 
 
-  <link rel="canonical" href="https://unitytech.github.io/udp/Configuring-and-building-your-game-for-UDP/"/>
+  <link rel="canonical" href="https://unitytech.github.io/udp/Unity-Distribution-Platform/"/>
 
 
 
@@ -260,38 +257,12 @@
       <div class="post-body">
         
         
-          <p><br></p>
-<h2><span id="configuring-and-building-your-game-for-udp">Configuring and building your game for UDP</span><a href="#configuring-and-building-your-game-for-udp" class="header-anchor">#</a></h2><h3><span id="configuring-udp-sdk">Configuring UDP SDK</span><a href="#configuring-udp-sdk" class="header-anchor">#</a></h3><p>The UDP SDK is an easy way to integrate your game with UDP. To configure the UDP SDK, you need to the following steps:</p>
-<h4><span id="step-1-import-udp-sdk">Step 1: Import UDP SDK</span><a href="#step-1-import-udp-sdk" class="header-anchor">#</a></h4><ol>
-<li><p>Open Unity and log in with a Unity account. If you don’t have a Unity account yet, register one in <a href="https://id.unity.com" target="_blank" rel="noopener">https://id.unity.com</a>. </p>
-</li>
-<li><p>Create or open a project and import the SDK. The SDK can be downloaded from <a href="https://unitytech.github.io/udp/">https://unitytech.github.io/udp/</a>. </p>
-</li>
-</ol>
+          <p><br><br>Unity Distribution Platform (UDP) streamlines your entire app distribution process. You can seamlessly build for, and deploy to, the following partner app stores:  </p>
 <ul>
-<li>Stand-Alone UDP SDK<br>If you are currently not using Unity IAP, download and import this <a href="https://unitytech.github.io/udp/2018/07/31/UDP-SDK-Beta-v0-2/UDP-SDK-Beta-v0.2-with-Sample.unitypackage">SDK</a>. You also need to complete the technical integration according to <a href="../technical-integration">Technical integration (without Unity IAP)</a>.</li>
-<li>Unity IAP Pagckage<br>If you are currently using Unity IAP, download and import this <a href="https://unitytech.github.io/udp/2018/07/31/UDP-SDK-Beta-v0-2/UnityIAP-with-UDP-Beta-v0.2.unitypackage">SDK</a>. You also need to complete the technical integration according to <a href="../technical-integration-IAP">Technical integration (with Unity IAP)</a>.</li>
+<li>Cloud Moolah    </li>
+<li>Aptoide, OneStore, Xiaomi, and Huawei (coming soon)</li>
 </ul>
-<h5><span id="step-2-generate-a-unity-client-and-test-accounts">Step 2: Generate a Unity client and test accounts</span><a href="#step-2-generate-a-unity-client-and-test-accounts" class="header-anchor">#</a></h5><ol>
-<li><p>Create a <code>Game Settings.asset</code> file.</p>
-<!-- ![](images/Create-a-Game-Settings-file.png) -->
-<p><img src="../images/Create-a-Game-Settings-file.png" width="300px" align="middle"></p>
- 
-</li>
-<li><p>Click the <code>Game Settings.asset</code> file under <code>Assets &gt; Plugins &gt; UnityChannel &gt; UdpSupport &gt; Resources</code> and generate a Unity client and test accounts.</p>
-<!-- ![](images/Generate-a-Unity-client-and-test-accounts.png) -->
-<p><img src="../images/Unity-clent-updated.png" width="400px"></p>
- 
-<p>In the above screenshot, you may need to use the following fields in <code>UDP Client Settings</code>:</p>
-</li>
-</ol>
-<ul>
-<li><code>Client ID</code> is the issued client identifier. </li>
-<li><code>Client RSA Public Key</code> is used to validate the purchase signature for UDP.</li>
-<li><code>Client Secret</code> is the key to encrypting the receipt sent to developers’ server (Callback URL).</li>
-<li><code>Callback URL</code> provides your own server to receive the stores’ callbacks.</li>
-</ul>
-<h5><span id="step-3-implement-iap">Step 3: Implement IAP</span><a href="#step-3-implement-iap" class="header-anchor">#</a></h5><p><a href="../Implementing-IAP">Implement IAP</a> if you have items to sell in your game.</p>
+<p>UDP lets you implement your IAPs at one time only, automatically build store-specific packages, and publish these repackaged game or app directly to the stores. You can also submit to selected stores directly on the UDP portal.</p>
 
         
       </div>

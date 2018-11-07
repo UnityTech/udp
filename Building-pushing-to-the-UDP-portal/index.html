@@ -79,23 +79,20 @@
 
 
 
-<meta name="description" content="Building your game and pushing it to the UDP portal#Building your game#Create a local Android APK build in the Editor (File &amp;gt; Build Settings… &amp;gt; Android &amp;gt; Build). For more information, refer">
+<meta name="description" content="Building your game and pushing it to the UDP portal#Building your game#Create a local Android APK build in the Editor (File &amp;gt; Build Settings &amp;gt; Android &amp;gt; Build). For more information, refer t">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Unity Distribution Platform">
 <meta property="og:url" content="https://unitytech.github.io/udp/Building-pushing-to-the-UDP-portal/index.html">
 <meta property="og:site_name" content="Unity Distribution Platform">
-<meta property="og:description" content="Building your game and pushing it to the UDP portal#Building your game#Create a local Android APK build in the Editor (File &amp;gt; Build Settings… &amp;gt; Android &amp;gt; Build). For more information, refer">
+<meta property="og:description" content="Building your game and pushing it to the UDP portal#Building your game#Create a local Android APK build in the Editor (File &amp;gt; Build Settings &amp;gt; Android &amp;gt; Build). For more information, refer t">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://unitytech.github.io/udp/images/upload-APK.png">
-<meta property="og:image" content="https://unitytech.github.io/udp/images/Uploading-Cloud-Build-the-Editor.png">
 <meta property="og:image" content="https://unitytech.github.io/udp/images/Uploading-Cloud-Build-Developer-Dashboard.png">
-<meta property="og:image" content="https://unitytech.github.io/udp/images/Pushing-hosted-build-UDP-Editor.png">
 <meta property="og:image" content="https://unitytech.github.io/udp/images/Pushing-hosted-build-UDP-dashboard.png">
-<meta property="og:updated_time" content="2018-09-06T10:43:57.902Z">
+<meta property="og:updated_time" content="2018-11-07T10:28:00.584Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity Distribution Platform">
-<meta name="twitter:description" content="Building your game and pushing it to the UDP portal#Building your game#Create a local Android APK build in the Editor (File &amp;gt; Build Settings… &amp;gt; Android &amp;gt; Build). For more information, refer">
-<meta name="twitter:image" content="https://unitytech.github.io/udp/images/upload-APK.png">
+<meta name="twitter:description" content="Building your game and pushing it to the UDP portal#Building your game#Create a local Android APK build in the Editor (File &amp;gt; Build Settings &amp;gt; Android &amp;gt; Build). For more information, refer t">
+<meta name="twitter:image" content="https://unitytech.github.io/udp/images/Uploading-Cloud-Build-Developer-Dashboard.png">
 
 
 
@@ -264,32 +261,35 @@
         
         
           <p><br></p>
-<h2><span id="building-your-game-and-pushing-it-to-the-udp-portal">Building your game and pushing it to the UDP portal</span><a href="#building-your-game-and-pushing-it-to-the-udp-portal" class="header-anchor">#</a></h2><h3><span id="building-your-game">Building your game</span><a href="#building-your-game" class="header-anchor">#</a></h3><p>Create a local Android APK build in the Editor (File &gt; Build Settings… &gt; Android &gt; Build). For more information, refer to <a href="https://docs.unity3d.com/Manual/android-GettingStarted.html" target="_blank" rel="noopener">Getting started with Android development</a></p>
-<h2><span id="pushing-your-game-file-to-the-udp-portal">Pushing your game file to the UDP portal</span><a href="#pushing-your-game-file-to-the-udp-portal" class="header-anchor">#</a></h2><h3><span id="uploading-your-game-file-to-udp-portal-directly">Uploading your game file to UDP portal directly</span><a href="#uploading-your-game-file-to-udp-portal-directly" class="header-anchor">#</a></h3><p>You can create a local build in Unity Editor and upload it to UDP portal directly.</p>
+<h2><span id="building-your-game-and-pushing-it-to-the-udp-portal">Building your game and pushing it to the UDP portal</span><a href="#building-your-game-and-pushing-it-to-the-udp-portal" class="header-anchor">#</a></h2><h3><span id="building-your-game">Building your game</span><a href="#building-your-game" class="header-anchor">#</a></h3><p>Create a local Android APK build in the Editor (<strong>File</strong> &gt; <strong>Build Settings</strong> &gt; <strong>Android</strong> &gt; <strong>Build</strong>). For more information, refer to <a href="https://docs.unity3d.com/Manual/android-GettingStarted.html" target="_blank" rel="noopener">Getting started with Android development</a></p>
+<h3><span id="uploading-your-game-file-to-the-udp-portal-directly">Uploading your game file to the UDP portal directly</span><a href="#uploading-your-game-file-to-the-udp-portal-directly" class="header-anchor">#</a></h3><p>You can create a local build in the Unity Editor and upload it to the UDP portal directly.</p>
 <ol>
-<li>On the UDP portal, navigate to your project.</li>
-<li>Select <code>GAME INFO</code> &gt; <code>Basic</code>.</li>
-<li>Upload the APK file of your game.</li>
+<li>On the <a href="https://connect.unity.com/udp" target="_blank" rel="noopener">UDP portal</a>, navigate to your Project.</li>
+<li>Select <strong>GAME INFO</strong> &gt; <strong>Basic</strong>.</li>
+<li>Click <strong>APK Files</strong> to upload the APK file of your game.</li>
 </ol>
-<p><img src="../images/upload-APK.png" width="500px/"></p>
-<h4><span id="pushing-the-project-to-the-udp-portal">Pushing the Project to the UDP portal</span><a href="#pushing-the-project-to-the-udp-portal" class="header-anchor">#</a></h4><p>In the Editor, enable Cloud Build through the Unity Services window (see documentation on Cloud Build implementation).</p>
-<h4><span id="upload-the-build">Upload the build</span><a href="#upload-the-build" class="header-anchor">#</a></h4><p>Upload your build to the build history for your project, using one of the following methods:</p>
-<h5><span id="from-the-editor">From the Editor:</span><a href="#from-the-editor" class="header-anchor">#</a></h5><ol>
+<h3><span id="pushing-the-project-to-the-udp-portal-via-cloud-build">Pushing the Project to the UDP portal via Cloud Build</span><a href="#pushing-the-project-to-the-udp-portal-via-cloud-build" class="header-anchor">#</a></h3><p>In the Editor, enable Cloud Build through the Unity Services window (see documentation on <a href="https://docs.unity3d.com/Manual/UnityCloudBuild.html" target="_blank" rel="noopener">Cloud Build implementation</a>).</p>
+<p>If you use Unity Team Advanced, you can generate builds automatically (see documentation on <a href="https://docs.unity3d.com/Manual/UnityCloudBuildContinuousIntegration.html" target="_blank" rel="noopener">Automated Build Generation</a>). Otherwise, upload the build either from the Editor or the Unity Cloud Build Developer Dashboard. </p>
+<h4><span id="upload-the-build">Upload the build</span><a href="#upload-the-build" class="header-anchor">#</a></h4><p>Upload your build to the build history for your Project, using one of the following methods:</p>
+<p><strong>From the Editor</strong>:</p>
+<ol>
 <li>In the <strong>Cloud Build Services</strong> window, if you haven’t uploaded any build before, select <strong>Upload Build</strong>. Otherwise, select <strong>Manage Target Builds</strong> &gt; <strong>Add New Target</strong>.</li>
-<li>In the <strong>TARGET SETUP</strong> menu, set the <strong>PLATFORM</strong> field to your intended platform and enter a useful <strong>TARGET LABEL</strong>. Then select <strong>Next: Save</strong>.</li>
-<li>Select <strong>Start Cloud Build</strong>, then select the target build you just created.<br><img src="../images/Uploading-Cloud-Build-the-Editor.png" alt="alt_text" title="Uploading a Cloud Build via the Editor"></li>
+<li>In the <strong>TARGET SETUP</strong> window, set the <strong>PLATFORM</strong> field to your intended platform and enter a useful <strong>TARGET LABEL</strong>. Then select <strong>Next: Save</strong>.</li>
+<li>Select <strong>Start Cloud Build</strong>, then select the target build you just created.</li>
 </ol>
-<h5><span id="from-the-unity-cloud-build-developer-dashboard">From the :</span><a href="#from-the-unity-cloud-build-developer-dashboard" class="header-anchor">#</a></h5><ol>
-<li>Navigate to your Project’s <strong>Cloud Build History</strong>.</li>
+<p><strong>From the <a href="https://developer.cloud.unity3d.com/build" target="_blank" rel="noopener">Unity Cloud Build Developer Dashboard</a></strong>:</p>
+<ol>
+<li>Navigate to your Project’s <strong>Cloud Build</strong> &gt; <strong>History</strong>.</li>
 <li>Select <strong>Upload</strong>, then select the APK file you built from the Editor.</li>
 </ol>
 <p><img src="../images/Uploading-Cloud-Build-Developer-Dashboard.png" alt="alt_text" title="Uploading a Cloud Build via the Developer Dashboard."></p>
-<h4><span id="push-the-build-to-udp">Push the build to UDP</span><a href="#push-the-build-to-udp" class="header-anchor">#</a></h4><p>Push the the hosted build to the UDP portal, using one of two methods:</p>
-<h5><span id="from-the-editor">From the Editor:</span><a href="#from-the-editor" class="header-anchor">#</a></h5><p>In the Cloud Build Services window, locate the desired build from the build history timeline and select <strong>Push to UDP</strong>. Verify that you want to push, and that the action completes.</p>
-<p><img src="../images/Pushing-hosted-build-UDP-Editor.png" alt="alt_text" title="Pushing a hosted build to UDP via the Editor."></p>
-<h5><span id="from-the-unity-cloud-build-developer-dashboard">From the :</span><a href="#from-the-unity-cloud-build-developer-dashboard" class="header-anchor">#</a></h5><ol>
+<h3><span id="push-the-build-to-udp">Push the build to UDP</span><a href="#push-the-build-to-udp" class="header-anchor">#</a></h3><p>Push the the hosted build to the UDP portal, using one of two methods:</p>
+<p><strong>From the Editor</strong>:</p>
+<p>In the Cloud Build Services window, locate the desired build from the build history timeline and select <strong>Push to Unity Distribution Platform</strong>. Verify that you want to push, and that the action completes.</p>
+<p><strong>From the <a href="https://developer.cloud.unity3d.com/build" target="_blank" rel="noopener">Unity Cloud Build Developer Dashboard</a></strong>:</p>
+<ol>
 <li>Navigate to your Project’s <strong>Cloud Build History</strong>.</li>
-<li>Select <strong>Download .APK</strong> file, then select <strong>Push to UDP</strong> from the dropdown menu.</li>
+<li>Select <strong>Download .APK</strong> file, then select <strong>Push to Unity Distribution Platform</strong> from the dropdown menu.</li>
 </ol>
 <p><img src="../images/Pushing-hosted-build-UDP-dashboard.png" alt="alt_text" title="Pushing a hosted build to UDP via the Unity Developer Dashboard."></p>
 <p><strong>Note</strong>: Only the owner of the organization that your project is under will be able to deploy to UDP.</p>

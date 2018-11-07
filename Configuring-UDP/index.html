@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="To use UDP IAP, implement it on both the client and the server sides.   Implemting UDP IAP on the client sideThe implementation on the client side includes initializing the UDP SDK and integrating wit">
+<meta name="description" content="Configuring Unity Distribution Platform#To configure Unity Distribution Platform (UDP):  Set up UDP     Generate a Unity client and test accounts  Setting up UDP# Open Unity and log in with a Unity a">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Implementing UDP IAP">
-<meta property="og:url" content="https://unitytech.github.io/udp/Implementing-UDP-IAP/index.html">
+<meta property="og:title" content="Unity Distribution Platform">
+<meta property="og:url" content="https://unitytech.github.io/udp/Configuring-UDP/index.html">
 <meta property="og:site_name" content="Unity Distribution Platform">
-<meta property="og:description" content="To use UDP IAP, implement it on both the client and the server sides.   Implemting UDP IAP on the client sideThe implementation on the client side includes initializing the UDP SDK and integrating wit">
+<meta property="og:description" content="Configuring Unity Distribution Platform#To configure Unity Distribution Platform (UDP):  Set up UDP     Generate a Unity client and test accounts  Setting up UDP# Open Unity and log in with a Unity a">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-07T10:37:07.305Z">
+<meta property="og:image" content="https://unitytech.github.io/udp/images/Unity-clent-generated.png">
+<meta property="og:updated_time" content="2018-11-07T10:29:00.720Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Implementing UDP IAP">
-<meta name="twitter:description" content="To use UDP IAP, implement it on both the client and the server sides.   Implemting UDP IAP on the client sideThe implementation on the client side includes initializing the UDP SDK and integrating wit">
+<meta name="twitter:title" content="Unity Distribution Platform">
+<meta name="twitter:description" content="Configuring Unity Distribution Platform#To configure Unity Distribution Platform (UDP):  Set up UDP     Generate a Unity client and test accounts  Setting up UDP# Open Unity and log in with a Unity a">
+<meta name="twitter:image" content="https://unitytech.github.io/udp/images/Unity-clent-generated.png">
 
 
 
@@ -119,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://unitytech.github.io/udp/Implementing-UDP-IAP/"/>
+  <link rel="canonical" href="https://unitytech.github.io/udp/Configuring-UDP/"/>
 
 
 
 
 
-  <title>Implementing UDP IAP | Unity Distribution Platform</title>
+  <title> | Unity Distribution Platform</title>
   
 
 
@@ -245,7 +247,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">Implementing UDP IAP</h1>
+	<h1 class="post-title" itemprop="name headline"></h1>
 
 
 
@@ -257,11 +259,68 @@
       <div class="post-body">
         
         
-          <p><br><br>To use UDP IAP, implement it on both the client and the server sides. </p>
-<ul>
-<li><a href="../Implementing-UDP-IAP-on-the-client-side">Implemting UDP IAP on the client side</a><br>The implementation on the client side includes initializing the UDP SDK and integrating with the in-app purchase flow of UDP.</li>
-<li><a href="../Implementing-UDP-IAP-on-the-server-side">Implemting UDP IAP on the server side</a><br>The implementation on the server side lets you query the UDP server about orders, receive callback notifications, and send back the acknowledgements.</li>
-</ul>
+          <p><br></p>
+<h2><span id="configuring-unity-distribution-platform">Configuring Unity Distribution Platform</span><a href="#configuring-unity-distribution-platform" class="header-anchor">#</a></h2><p>To configure Unity Distribution Platform (UDP):</p>
+<ol>
+<li>Set up UDP    </li>
+<li>Generate a Unity client and test accounts</li>
+</ol>
+<h3><span id="setting-up-udp">Setting up UDP</span><a href="#setting-up-udp" class="header-anchor">#</a></h3><ol>
+<li><p>Open Unity and log in with a Unity account. If you don’t have a Unity account yet, register one in <a href="https://id.unity.com" target="_blank" rel="noopener">https://id.unity.com</a>. </p>
+</li>
+<li><p>Create or open a Project in the Unity Editor.</p>
+</li>
+<li><p>Download  the <a href="https://unitytech.github.io/udp/2018/07/31/UDP-SDK-Beta-v0-2/UDP-SDK-Beta-v0.2-with-Sample.unitypackage">UDP SDK</a>. </p>
+</li>
+<li><p>Double-click the UDP package. The Import Unity Package window appears.</p>
+</li>
+<li><p>Select <strong>Import</strong>. Unity imports the UDP SDK.</p>
+</li>
+</ol>
+<p>To complete the UDP IAP integration, refer to <a href="../Implementing-UDP-IAP">Implementing UDP IAP</a>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Tip: Unity IAP supports UDP as of version 1.21. You can enable UDP by setting up Unity IAP. To complete the Unity IAP technical integration, refer to Technical integration for Unity IAP.</span><br></pre></td></tr></table></figure>
+<div style="width:710px;height:55px;border:1px solid #000;">Tip: Unity IAP supports UDP as of version 1.21. You can enable UDP by <a href="https://docs.unity3d.com/Manual/UnityIAPSettingUp.html" target="_blank" rel="noopener">setting up Unity IAP</a>. To complete the Unity IAP integration, refer to <a href="../Implementing-Unity-IAP">Implementing Unity IAP for UDP</a>. </div>
+
+
+
+<h3><span id="generating-a-unity-client-and-test-accounts">Generating a Unity client and test accounts</span><a href="#generating-a-unity-client-and-test-accounts" class="header-anchor">#</a></h3><p>The UDP SDK contains a <strong>GameSettings</strong> file. You can use the file to generate a Unity client and test accounts.</p>
+<ol>
+<li><p>Create a <strong>GameSettings</strong> file by selecting <strong>Window</strong> &gt; <strong>Unity UDP</strong> &gt; <strong>Game Settings</strong>. </p>
+</li>
+<li><p>View the Game Settings.asset file in the <strong>Inspector</strong> window and generate a Unity client by clicking <strong>Generate Unity Client</strong>.</p>
+</li>
+</ol>
+<p><img src="../images/Unity-clent-generated.png" width="400px"></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th style="text-align:center">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Client ID</strong></td>
+<td style="text-align:center">The client identifier</td>
+</tr>
+<tr>
+<td><strong>Client Key</strong></td>
+<td style="text-align:center">Which is used when initializing the UDP SDK</td>
+</tr>
+<tr>
+<td><strong>Client RSA Public Key</strong></td>
+<td style="text-align:center">Which is used to verify the callback notification</td>
+</tr>
+<tr>
+<td><strong>Client Secret</strong></td>
+<td style="text-align:center">A Unity key to signing your request that your game send to the UDP server</td>
+</tr>
+<tr>
+<td><strong>Callback URL</strong></td>
+<td style="text-align:center">Specifies the server that receives the callback notification</td>
+</tr>
+</tbody>
+</table>
 
         
       </div>
