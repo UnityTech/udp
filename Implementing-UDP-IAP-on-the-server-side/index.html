@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Implementing UDP IAP on the server side#The server-side integration consists of the following steps:  Query orders Receive callback notifications  Querying Orders#You can query orders by implementing">
+<meta name="description" content="Implementing UDP IAP on the server side#The server-side integration consists of the following steps:  Query orders Receive callback notifications  Querying Orders#Your game can query UDP about orders">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Unity Distribution Platform">
 <meta property="og:url" content="https://unitytech.github.io/udp/Implementing-UDP-IAP-on-the-server-side/index.html">
 <meta property="og:site_name" content="Unity Distribution Platform">
-<meta property="og:description" content="Implementing UDP IAP on the server side#The server-side integration consists of the following steps:  Query orders Receive callback notifications  Querying Orders#You can query orders by implementing">
+<meta property="og:description" content="Implementing UDP IAP on the server side#The server-side integration consists of the following steps:  Query orders Receive callback notifications  Querying Orders#Your game can query UDP about orders">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-11T06:00:01.904Z">
+<meta property="og:updated_time" content="2018-11-09T10:33:24.543Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity Distribution Platform">
-<meta name="twitter:description" content="Implementing UDP IAP on the server side#The server-side integration consists of the following steps:  Query orders Receive callback notifications  Querying Orders#You can query orders by implementing">
+<meta name="twitter:description" content="Implementing UDP IAP on the server side#The server-side integration consists of the following steps:  Query orders Receive callback notifications  Querying Orders#Your game can query UDP about orders">
 
 
 
@@ -263,7 +263,7 @@
 <li>Query orders</li>
 <li>Receive callback notifications</li>
 </ul>
-<h3><span id="querying-orders">Querying Orders</span><a href="#querying-orders" class="header-anchor">#</a></h3><p>You can query orders by implementing an HTTP GET request as follows:</p>
+<h3><span id="querying-orders">Querying Orders</span><a href="#querying-orders" class="header-anchor">#</a></h3><p>Your game can query UDP about orders by calling an HTTP GET request.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET https://api-channel.unity.com/v1/order-attempts/query?cpOrderId=&lt;cpOrderId&gt;&amp;clientId=&lt;clientId&gt;&amp;orderQueryToken=&lt;orderQueryToken&gt;&amp;sign=&lt;sign&gt;</span><br></pre></td></tr></table></figure>
 <p>Parameters in the request</p>
 <table>
@@ -307,7 +307,7 @@
 </tr>
 </tbody>
 </table>
-<p>Response (in JSON)</p>
+<p>Parameters in the response</p>
 <table>
 <thead>
 <tr>
@@ -330,7 +330,7 @@
 <td>clientId</td>
 <td>String</td>
 <td>Required</td>
-<td>The clientId is returned by Unity after the game has created a client in the Unity IAP.</td>
+<td>The clientId that is returned by Unity after the game has created a client in the Unity IAP.</td>
 <td>Q4AnJDW2-rxLAPujqrk1zQ</td>
 </tr>
 <tr>
@@ -344,7 +344,7 @@
 <td>uid</td>
 <td>String</td>
 <td>Required</td>
-<td>The uid is a user id assigned by Unity.</td>
+<td>A user identifier assigned by Unity.</td>
 <td>15400813498</td>
 </tr>
 <tr>
@@ -358,14 +358,14 @@
 <td>productId</td>
 <td>String</td>
 <td>Required</td>
-<td>The productId is the product id associated with the order.</td>
+<td>The product id associated with the order</td>
 <td>Product_1</td>
 </tr>
 <tr>
 <td>payFee</td>
 <td>Integer</td>
 <td>Required</td>
-<td>The payFee is the payment amount of the order.</td>
+<td>The payment amount of the order</td>
 <td>1</td>
 </tr>
 <tr>
