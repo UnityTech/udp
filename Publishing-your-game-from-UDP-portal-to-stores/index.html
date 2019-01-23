@@ -79,21 +79,17 @@
 
 
 
-<meta name="description" content="Publishing Your Game from UDP Portal to Stores#With UDP portal, you can publish your game to a partner store. Currently the supported stores include Google, Amazon, Samsung, CloudMoolah, and Xiaomi.">
+<meta name="description" content="Publishing Your Game from UDP Portal to Stores#With the UDP portal, you can publish your game to partner stores. Currently Cloud Moolah is the only partner store. Before you can publish your game, re">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Unity Distribution Platform">
 <meta property="og:url" content="https://unitytech.github.io/udp/Publishing-your-game-from-UDP-portal-to-stores/index.html">
 <meta property="og:site_name" content="Unity Distribution Platform">
-<meta property="og:description" content="Publishing Your Game from UDP Portal to Stores#With UDP portal, you can publish your game to a partner store. Currently the supported stores include Google, Amazon, Samsung, CloudMoolah, and Xiaomi.">
+<meta property="og:description" content="Publishing Your Game from UDP Portal to Stores#With the UDP portal, you can publish your game to partner stores. Currently Cloud Moolah is the only partner store. Before you can publish your game, re">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://unitytech.github.io/udp/images/select-stores.png">
-<meta property="og:image" content="https://unitytech.github.io/udp/images/publish-to-stores.png">
-<meta property="og:image" content="https://unitytech.github.io/udp/images/store-status.png">
-<meta property="og:updated_time" content="2018-09-07T03:23:17.471Z">
+<meta property="og:updated_time" content="2019-01-23T10:44:21.093Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity Distribution Platform">
-<meta name="twitter:description" content="Publishing Your Game from UDP Portal to Stores#With UDP portal, you can publish your game to a partner store. Currently the supported stores include Google, Amazon, Samsung, CloudMoolah, and Xiaomi.">
-<meta name="twitter:image" content="https://unitytech.github.io/udp/images/select-stores.png">
+<meta name="twitter:description" content="Publishing Your Game from UDP Portal to Stores#With the UDP portal, you can publish your game to partner stores. Currently Cloud Moolah is the only partner store. Before you can publish your game, re">
 
 
 
@@ -184,42 +180,22 @@
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
+        <li class="menu-item menu-item-get-started">
           <a href="/udp/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Get Started
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/udp/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-quick-guide">
-          <a href="/udp/Quick-Guide/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
-            
-            Quick Guide
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-document">
+        <li class="menu-item menu-item-documentation">
           <a href="/udp/UDP-Guide/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
             
-            Document
+            Documentation
           </a>
         </li>
       
@@ -262,22 +238,44 @@
         
         
           <p><br></p>
-<h2><span id="publishing-your-game-from-udp-portal-to-stores">Publishing Your Game from UDP Portal to Stores</span><a href="#publishing-your-game-from-udp-portal-to-stores" class="header-anchor">#</a></h2><p>With UDP portal, you can publish your game to a partner store. Currently the supported stores include Google, Amazon, Samsung, CloudMoolah, and Xiaomi.</p>
+<h2><span id="publishing-your-game-from-udp-portal-to-stores">Publishing Your Game from UDP Portal to Stores</span><a href="#publishing-your-game-from-udp-portal-to-stores" class="header-anchor">#</a></h2><p>With the UDP portal, you can publish your game to partner stores. Currently Cloud Moolah is the only partner store. Before you can publish your game, register to Cloud Moolah:</p>
 <ol>
-<li><p>Select your game on the UDP portal.</p>
-</li>
-<li><p>In the <code>PUBLISH</code> panel, select the stores you want to publish to and configure these stores.<br><img src="../images/select-stores.png" width="500px/"></p>
-</li>
-<li>Publish your game to the stores by selecting <code>Publish</code>.<br><img src="../images/publish-to-stores.png" width="500px/"></li>
-<li>In the <code>Status</code> panel, you can see the statuses of your game. </li>
+<li>On the UDP portal, select your game, pupulate the necessary information, and release the game.</li>
+<li>Go to the registration page of Cloud Moohlah by clicking Register to <code>Cloud Moohlah / Moo Store</code>.</li>
+<li>Create a developer account.</li>
 </ol>
+<p>Once you have a developer account for Cloud Moolah, publish your game to the store, as follows:</p>
+<ol>
+<li><p>Select your game on the UDP Portal.</p>
+</li>
+<li><p>In the Publish panel, select the store you want to publish to, enter the package name, and save the store.</p>
+</li>
+<li>Click Countries and select the countries that you want to distribute your game to. </li>
+<li>Click Advanced to configure more settings. </li>
+</ol>
+<p>Enter the following package properties depending on which store you are configuring:</p>
 <ul>
+<li>Target SDK: The version of the SDK for the store that you publish your game to</li>
+<li>Available Step: Specifies to which step UDP handles your game. You can choose either of the following steps:<ul>
+<li>Pack, which indicates the step where UDP packs your game with the SDK from the selected store.</li>
+<li>Test, which indicates that the step where UDP packs and submits your game to the test environment of the selected stores.</li>
+<li>Prod, which indicates the step where UDP packs and submits your game to the production environment of the selected stores.</li>
+</ul>
+</li>
+<li>Package Name: The name of the package</li>
+<li>Price: The price of the game</li>
+<li>Beta Users: Specifies the users who will receive a link to the game. </li>
+</ul>
+<ol>
+<li>In the <code>Status</code> panel, you can see your game in different statuses. <ul>
 <li><code>Packed</code>, which indicates that your game has been packed with the SDK from the selected stores.</li>
 <li><code>Synced</code>, which indicates that your game has been packed and synced to the test environment of the selected stores.</li>
 <li><code>Promoted</code>, which indicates that your game has been packed and synced to the productive environment of the selected stores.</li>
 <li><code>Pending</code>, which indicates the packing is ongoing</li>
-<li><code>Failed</code>, which indicates the packing has failed<br><img src="../images/store-status.png" width="500px/"></li>
+<li><code>Failed</code>, which indicates the packing has failed</li>
 </ul>
+</li>
+</ol>
 
         
       </div>
@@ -332,9 +330,9 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/udp/archives/">
+                <a href="/udp/archives">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -377,7 +375,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
