@@ -79,19 +79,17 @@
 
 
 
-<meta name="description" content="Frequently Asked Questions#1. Why an exception (ClassNotFoundException) is raised when I initialize the UDP SDK?# Cause  You may encounter the error because you didn’t target UDP using Unity IAP’s Wi">
+<meta name="description" content="What is UDP?#UDP (Unity Distribution Platform) is a Unity product that allows you to distribute your games to multiple game stores while maintaining a single game build throughout the process. We know">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Unity Distribution Platform">
 <meta property="og:url" content="https://unitytech.github.io/udp/FAQ/index.html">
 <meta property="og:site_name" content="Unity Distribution Platform">
-<meta property="og:description" content="Frequently Asked Questions#1. Why an exception (ClassNotFoundException) is raised when I initialize the UDP SDK?# Cause  You may encounter the error because you didn’t target UDP using Unity IAP’s Wi">
+<meta property="og:description" content="What is UDP?#UDP (Unity Distribution Platform) is a Unity product that allows you to distribute your games to multiple game stores while maintaining a single game build throughout the process. We know">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://unitytech.github.io/udp/images/FAQ-mixed-IAP.png">
-<meta property="og:updated_time" content="2018-09-07T08:19:46.761Z">
+<meta property="og:updated_time" content="2019-01-24T10:08:33.162Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity Distribution Platform">
-<meta name="twitter:description" content="Frequently Asked Questions#1. Why an exception (ClassNotFoundException) is raised when I initialize the UDP SDK?# Cause  You may encounter the error because you didn’t target UDP using Unity IAP’s Wi">
-<meta name="twitter:image" content="https://unitytech.github.io/udp/images/FAQ-mixed-IAP.png">
+<meta name="twitter:description" content="What is UDP?#UDP (Unity Distribution Platform) is a Unity product that allows you to distribute your games to multiple game stores while maintaining a single game build throughout the process. We know">
 
 
 
@@ -201,6 +199,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-faqs">
+          <a href="/udp/FAQ/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question"></i> <br />
+            
+            FAQs
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -239,15 +247,21 @@
       <div class="post-body">
         
         
-          <p><br></p>
-<h2><span id="frequently-asked-questions">Frequently Asked Questions</span><a href="#frequently-asked-questions" class="header-anchor">#</a></h2><h3><span id="1-why-an-exception-classnotfoundexception-is-raised-when-i-initialize-the-udp-sdk">1. Why an exception (ClassNotFoundException) is raised when I initialize the UDP SDK?</span><a href="#1-why-an-exception-classnotfoundexception-is-raised-when-i-initialize-the-udp-sdk" class="header-anchor">#</a></h3><p><strong> Cause </strong></p>
-<p>You may encounter the error because you didn’t target UDP using Unity IAP’s Window &gt; Unity IAP &gt; Android &gt; Target Unity Distribution Platform (UDP) menu item when using Unity IAP. </p>
-<p><img src="../images/FAQ-mixed-IAP.png" width="500px"></p>
-<p><strong> Solution </strong></p>
-<p>Change the target store to UDP. </p>
-<p>For detailed informantion, please refer to to <a href="Implementing-Unity-IAP">Implementing Unity IAP</a>. </p>
-<h3><span id="2-what-is-the-difference-between-consumbable-and-non-consume-items">2. What is the difference between consumbable and non-consume items?</span><a href="#2-what-is-the-difference-between-consumbable-and-non-consume-items" class="header-anchor">#</a></h3><p>UDP IAP supports two kinds of items, consumable items and non-consumable items.<br>Consumable items can be made available to your players multiple times. They provide temporary effects, such as game currency and extra experience points.<br>Non-consumable items can be purchased only once and provide permanent effects. </p>
-<h3><span id="3-is-there-any-problem-if-i-try-the-initialization-only-once-before-purchasing">3. Is there any problem if I try the initialization only once before purchasing?</span><a href="#3-is-there-any-problem-if-i-try-the-initialization-only-once-before-purchasing" class="header-anchor">#</a></h3><p>No, there won’t be any problem because Initialization (StoreService.Initialize()) should only be called once.</p>
+          <h2><span id="what-is-udp">What is UDP?</span><a href="#what-is-udp" class="header-anchor">#</a></h2><p>UDP (Unity Distribution Platform) is a Unity product that allows you to distribute your games to multiple game stores while maintaining a single game build throughout the process. We know that most of you don’t address non-mainstream stores because of very real ROI concerns. Sometimes you don’t even know these stores exist. Most of you would however welcome the additional user base and revenue. But access to their users is locked behind store-specific SDKs. Submitting and updating your games for these stores can be a colourful process. UDP handles the heavy-lifting to remove those barriers. The UDP SDK will let you implement in-app purchases generically inside a single game build, and the Portal will repack it into store-specific builds, and submit them directly to the corresponding stores.</p>
+<h2><span id="why-is-unity-doing-this">Why is Unity doing this?</span><a href="#why-is-unity-doing-this" class="header-anchor">#</a></h2><p>We believe that content creators will benefit from a more diverse distribution ecosystem. UDP will give the creator community more options, and will let developers generate more revenue.</p>
+<h2><span id="what-s-the-cost-of-udp">What’s the cost of UDP?</span><a href="#what-s-the-cost-of-udp" class="header-anchor">#</a></h2><p>UDP is entirely free for content creators. Unity does NOT charge developers anything for using it.</p>
+<h2><span id="what-platforms-does-udp-support">What platforms does UDP support?</span><a href="#what-platforms-does-udp-support" class="header-anchor">#</a></h2><p>Currently, Android only.</p>
+<h2><span id="who-are-these-udp-stores">Who are these UDP stores?</span><a href="#who-are-these-udp-stores" class="header-anchor">#</a></h2><p>Android app stores globally. They can be OEMs, telcos, or global/regional app distribution players. Each have their userbase and own distinct monetization abilities (which you no longer have to worry about implementing). A description of each participating game store is available on the UDP Portal.</p>
+<h2><span id="are-all-android-app-stores-connected-to-udp">Are ALL Android app stores connected to UDP?</span><a href="#are-all-android-app-stores-connected-to-udp" class="header-anchor">#</a></h2><p>Not yet. Unity must work with the various stores to integrate them into the UDP flow, so that it can be seamless to you. Stores are added gradually as we complete the integrations.</p>
+<h2><span id="do-i-need-to-register-directly-with-these-stores">Do I need to register directly with these stores?</span><a href="#do-i-need-to-register-directly-with-these-stores" class="header-anchor">#</a></h2><p>Yes you do. You are still your own publisher to the store. Unity facilitates, but we are not publishing intermediaries. This leaves you the flexibility to have custom terms with stores (rather than be bound by a framework agreement). That also means you get paid directly by the stores, which is faster than if Unity had to collect from all stores, reconcile, and redistribute the revenue to all developers. That said, UDP will streamline registration to the stores so you can be set up in no time (and in most cases, simply with your UnityID).</p>
+<h2><span id="how-do-i-register-with-the-stores">How do I register with the stores?</span><a href="#how-do-i-register-with-the-stores" class="header-anchor">#</a></h2><p>The first time you want to submit a game to a store, you will be redirected to the store’s partner registration page. Our typical Oauth implementation will let you register using your UnityID so you don’t have to create and manage store-specific credentials. You then need to fill in the additional details (such as bank account). Once done we’ll take you back to the UDP Portal to continue the submission flow. Finally, that store registration will be done once and for all. Once registered to a store, you will see the “Registered” status show in the corresponding Partner Store page on the UDP Portal.</p>
+<h2><span id="do-i-have-to-submit-my-game-to-all-udp-stores">Do I have to submit my game to all UDP stores?</span><a href="#do-i-have-to-submit-my-game-to-all-udp-stores" class="header-anchor">#</a></h2><p>No. You choose which stores you want to give your game to. For global / regional app stores you can also decide which countries you are allowing your game to be distributed.</p>
+<h2><span id="what-happens-when-i-push-my-game-to-the-stores">What happens when I push my game to the stores?</span><a href="#what-happens-when-i-push-my-game-to-the-stores" class="header-anchor">#</a></h2><p>Your game will be reviewed by each store you submitted it to. If a store accepts your game they will then onboard it and coordinate the launch. You will always be notified of the outcome of your submission and whether your game goes live.</p>
+<h2><span id="does-unity-handle-the-store-payouts">Does Unity handle the store payouts?</span><a href="#does-unity-handle-the-store-payouts" class="header-anchor">#</a></h2><p>No. Unity won’t get involved in your business dealings with the stores – if we did the first consequence would be that your payout would take longer to reach you. Stores will ask for your bank account info when you register with them so that they can pay you directly.</p>
+<h2><span id="can-i-get-in-touch-with-these-stores">Can I get in touch with these stores?</span><a href="#can-i-get-in-touch-with-these-stores" class="header-anchor">#</a></h2><p>Sure. Each UDP store has a Partner Store showcase page which features links to their developer relations personnel and/or contact forms.</p>
+<h2><span id="what-stage-is-udp-at">What stage is UDP at?</span><a href="#what-stage-is-udp-at" class="header-anchor">#</a></h2><p>We have done a closed alpha and an (early) closed beta already. As more stores connect to UDP and as our initial feature set firms up, we now widen our beta to understand if the product we developed with a few of you is as relevant to a broader majority as we think it is.</p>
+<h2><span id="how-do-i-join-this-closed-beta">How do I join this closed beta?</span><a href="#how-do-i-join-this-closed-beta" class="header-anchor">#</a></h2><p><a href="https://goo.gl/forms/DKOMHYK5NTiuv88a2" target="_blank" rel="noopener">Fill in this form</a> so we have the info we need to whitelist you on the UDP Portal. We’ll then be in touch and provide further instructions.</p>
+<h2><span id="who-do-i-contact-for-support">Who do i contact for support?</span><a href="#who-do-i-contact-for-support" class="header-anchor">#</a></h2><p>Write to <a href="mailto:udpsupport@unity3d.com" target="_top">udpsupport@unity3d.com</a> and we’ll get back to you. Please provide specific details of the problem you are facing so we can better help you address it.</p>
 <div><br><div class="toc">
 
 <!-- toc -->
